@@ -1,0 +1,49 @@
+.brandQuality>:nth-child(1){
+    text-align: center;
+    padding: 20px;
+    font-weight: 600;
+}
+.qualityContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 50px;
+    background-color: rgb(65, 64, 64);
+    color: white;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    
+}
+.qualityContainer>:nth-child(1){
+    text-align: center;
+}
+.qualityContainer>:nth-child(2){
+    text-align: center;
+}
+.qualityContainer>:nth-child(3){
+    text-align: center;
+}
+.qualityLeft>:nth-child(1){
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+.qualityLeft>:nth-child(2){
+    font-size: 100px;
+    color: rgb(4, 179, 4);
+}
+.qualityCenter>:nth-child(1){
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+.qualityCenter>:nth-child(2){
+    font-size: 100px;
+    color: blue;
+}
+.qualityRight>:nth-child(1){
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+.qualityRight>:nth-child(2){
+    font-size: 100px;
+    color: rgb(217, 185, 4);
+}

@@ -1,0 +1,101 @@
+.testimonials {
+    padding: 184px 146px 20px 106px;
+    background-color: rgb(195, 214, 208);
+}
+.testimonialsLeft {
+    margin-left: 29px;
+}
+.testimonialHeading {
+    font-weight: 600;
+}
+
+.testimonialSubHeading {
+    font-weight: 400;
+    font-size: 10px;
+}
+
+.headingSection {
+    text-align: center;
+    margin-top: -157px;
+    margin-bottom: -57px;
+}
+
+.viewCorner {
+    margin-top: 80px;
+}
+
+
+
+.bubble {
+    height: 80px;
+    width: 200px;
+    border: 3px solid rgb(255, 255, 255);
+    background: rgb(255, 254, 254);
+    cursor: pointer;
+    text-align: center;
+    border-radius: 15px;
+    font-weight: 600px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 4px 15px 0 rgba(0, 0, 0, 0.19);
+}
+
+.triangle {
+    width: 0;
+    border-top: 20px solid rgb(255, 255, 255);
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    cursor: pointer;
+    margin-left: 85px;
+
+
+}
+
+.bubbleHeading {
+    margin-top: 18px;
+}
+
+.testimonialProfile {
+    width: 90px;
+    height: 90px;
+    border-radius: 100%;
+    margin-left: 55px;
+    object-fit: cover;
+}
+
+.profileInfo {
+    margin-left: 1px;
+    margin-top: 1px;
+}
+.star{
+    color: rgb(199, 170, 5);
+    
+}
+.star1{
+    color:rgb(0, 0, 0);
+    
+}
+.starContainer{
+    margin-left: 52px;
+
+}
+
+.profileName{
+    margin-left:48px;
+}
+
+.profilePosition{
+    margin-left:81px;
+}
+.slideButton{
+    margin-left: 420px;
+    margin-top: 23px;
+
+}
+
+button.slideButtons {
+    border-radius: 18px;
+    margin-inline-start: 10px;
+    background-color: white;
+    color: black;
+    border: none;   
+    width: 70px;
+}

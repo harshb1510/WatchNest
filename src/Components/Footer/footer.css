@@ -1,0 +1,39 @@
+.footerContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 40px 80px 20px 0px;
+}
+
+.footerleftSocial>:nth-child(1){
+   color: #1DA1F2;
+   margin-right: 5px;
+   font-size: 40px;
+}
+.footerleftSocial>:nth-child(2){
+    color: #0165E1;
+    margin-right: 5px;
+    font-size: 40px;
+ }
+ .footerleftSocial>:nth-child(3){
+    color: rgb(207, 88, 107);
+    margin-right: 5px;
+    font-size: 40px;
+ }
+.companyListing {
+    display: grid;
+    place-items: flex-start;
+}
+.footerrightEmail{
+    border-radius: 10px;
+    border: 1px solid black;
+    font-size: 15px;
+    padding: 2px;
+}
+.footerrightIcon{
+    border-radius: 10px;
+    background-color: lightgreen;
+    color: aliceblue;
+    border: none;
+    margin-left: 5px;
+}
