@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 
 const connect = async () => {
     try {
-        await mongoose.connect(process.env.DB, {
+        await mongoose.connect("mongodb+srv://harshb15003:harsh1510@cluster0.gr6iatu.mongodb.net/WatchAppUsers", {
             useNewUrlParser: true,
             useUnifiedTopology: true,
         });

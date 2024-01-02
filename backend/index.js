@@ -3,7 +3,6 @@ import cors from 'cors';
 import morgan from 'morgan';
 import connect from '../backend/db.js';
 import router from './routes/route.js';
-import {products} from "./products.js"
 import 'dotenv/config'
 
 
@@ -23,9 +22,7 @@ const port = 8080;
 app.get('/', (req, res) => {
     res.status(201).json("Home GET Request");
 });
-app.get("/products",(req,res)=>{
-    res.send({products});
-})
+
 
 
 /** api routes */

@@ -18,7 +18,7 @@ export default function Trending() {
     <section className='trending'>
       <h3 className='trendingHeading'>TRENDING PRODUCTS</h3>
       <div className="d-flex">
-        {data?.products?.map((product, index) => (
+        {data?.map((product, index) => (
           <Card key={index} className='flex card'>
             <Card.Img variant="top" src={product.img} className='cardImage' />
             <Card.Body className='cardproduct'>

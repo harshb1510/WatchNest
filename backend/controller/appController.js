@@ -1,7 +1,7 @@
 import UserModel from '../model/user.js'
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
-import {products} from "../products.js"
+import ProductModel from "../model/user.js"
 
 
 
@@ -137,5 +137,11 @@ export async function productsStore(req, res) {
   
 
 export async function product(req,res){
-    res.send({products});
+    try{
+        const products = await ProductModel.find();
+        res.send(products);
+    }catch(error){
+        console.error(error);
+        res.status(500).send({error:error.message || "Internal Server Error"});
+    }
 }

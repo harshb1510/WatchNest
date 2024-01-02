@@ -27,4 +27,5 @@ export const UserSchema = new mongoose.Schema({
     products:[ProductSchema]
 });
 
-export default mongoose.model.Users || mongoose.model('User', UserSchema);
+export default mongoose.model.Users&&mongoose.model.Products || mongoose.model('User'&&"Product", UserSchema&&ProductSchema);
+
