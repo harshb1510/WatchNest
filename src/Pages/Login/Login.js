@@ -21,7 +21,6 @@ const Signup = () => {
     e.preventDefault();
     try {
         const res = await axios.post("http://localhost:8080/api/login",data);
-        console.log(res.data.token);
         localStorage.setItem('token',res.data.token);
         navigate("/");
     } catch (error) {

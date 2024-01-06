@@ -2,7 +2,6 @@ import "./navbar.css";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import Cart from "../Cart/Cart";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Profile from "../Profile/Profile";

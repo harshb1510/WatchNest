@@ -5,13 +5,16 @@ import Card from 'react-bootstrap/Card';
 import { useGetAllProductsQuery } from '../../features/productsApi';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../features/cartSlice';
+import axios from 'axios';
+import { jwtDecode } from 'jwt-decode';
+import { addToCartOnBackend } from '../../features/cartSlice';
 
 export default function Trending() {
   const { data, error, isLoading } = useGetAllProductsQuery();
   const dispatch = useDispatch();
 
-  const handleAddToCart = (product) => {
-    dispatch(addToCart(product));
+  const handleAddToCart = async (product) => {
+    dispatch(addToCartOnBackend(product));
   };
 
   return (

@@ -17,7 +17,6 @@ const Profile = () => {
               fetch(`http://localhost:8080/api/user/${id}`)
                   .then(res => res.json()) // Parse the response as JSON
                   .then(data => {
-                      console.log(data);
                       setName(data.firstName);
                   })
                   .catch(err => console.log(err));

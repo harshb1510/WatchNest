@@ -25,9 +25,7 @@ export default function Signup() {
     try {
     
       const res = await axios.post( "http://localhost:8080/api/register",data);
-      console.log("response received");
       navigate("/login");
-      console.log(res.message);
     } catch (err) {
       if (err.response && err.response.status >= 400 && err.response.status <= 500) {
         setError(err.response.data.message);
