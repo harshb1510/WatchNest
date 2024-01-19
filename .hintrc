@@ -10,7 +10,9 @@
           "meta[name=theme-color]"
         ]
       }
-    ]
+    ],
+    "apple-touch-icons": "off",
+    "manifest-file-extension": "off"
   },
   "browserslist": [
     "defaults",
