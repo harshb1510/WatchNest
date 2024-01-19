@@ -1,0 +1,39 @@
+/* history.css */
+
+.history-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.transaction-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.transaction-card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.transaction-card:hover {
+  transform: scale(1.05);
+}
+
+.transaction-reference {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.transaction-type,
+.transaction-account,
+.transaction-amount,
+.transaction-date {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #555;
+}
+

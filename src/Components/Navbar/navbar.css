@@ -1,0 +1,44 @@
+
+.navbaricons{
+    display: flex;
+    justify-content: space-between;
+}
+.loginIcon{
+    display: grid;
+    padding-right: 25px;
+    align-items: center;
+}
+
+.cartQuantity {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    background-color: white;
+    color: black;
+    width: 12px;
+    height: 11px;
+    margin-top: -45px;
+    margin-left: 10px;
+    font-weight: 800;
+}
+
+.loginIcon span{
+    cursor: pointer;
+}
+.container-fluid>:nth-child(1){
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.loginLink{
+    color: white;
+}
+.navHeight{
+    padding-bottom: 10px;
+}
+.link2{
+    text-decoration: none;
+    color: white;
+}
