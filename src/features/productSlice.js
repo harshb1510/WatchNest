@@ -10,7 +10,7 @@ const initialState = {
 export const productsFetch = createAsyncThunk(
   "products/productsFetch",
   async () => {
-    const response = await axios.get(`${process.env.URL}/products`);
+    const response = await axios.get(`https://watchnest.onrender.com/api/products`);
     return response?.data;
   }
 );

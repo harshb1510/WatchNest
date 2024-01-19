@@ -39,7 +39,7 @@ const Checkout = () => {
       handler: async (response) => {
         try {
           // Send the necessary information for payment verification
-          const verifyUrl = `${process.env.URL}/user/${id}/verify`;
+          const verifyUrl = `https://watchnest.onrender.com/api/user/${id}/verify`;
           
           const verifyData = {
             razorpay_order_id: response.razorpay_order_id,
@@ -48,7 +48,7 @@ const Checkout = () => {
           };
            await axios.post(verifyUrl, verifyData);
            const orderData = order.data.orderDetails;
-           const saveOrderInfo = await axios.post(`${process.env.URL}/user/${id}/saveOrder`,orderData);
+           const saveOrderInfo = await axios.post(`https://watchnest.onrender.com/api/user/${id}/saveOrder`,orderData);
            toast.info(`Order placed`,{
             position:"top-center",
         })
@@ -71,7 +71,7 @@ const Checkout = () => {
     try {
       
       const order = await axios.post(
-        `${process.env.URL}/user/${id}/orders`,
+        `https://watchnest.onrender.com/api/user/${id}/orders`,
         cart
       );
       initPayment(order);

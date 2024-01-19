@@ -20,7 +20,7 @@ const Signup = () => {
   const handleSubmit=async(e)=>{
     e.preventDefault();
     try {
-        const res = await axios.post(`${process.env.URL}/login`,data);
+        const res = await axios.post(`https://watchnest.onrender.com/api/login`,data);
         localStorage.setItem('token',res.data.token);
         navigate("/");
     } catch (error) {

@@ -13,7 +13,7 @@ const user = localStorage.getItem("token");
 const fetchCartData = createAsyncThunk('cart/fetchCartData', async () => {
     try {
       if(id){
-      const response = await axios.get(`${process.env.URL}/user/${id}/cartData`); // Adjust the API endpoint
+      const response = await axios.get(`https://watchnest.onrender.com/api/user/${id}/cartData`); // Adjust the API endpoint
       return response.data;} // Assuming your API response has a 'cart' property
     } catch (error) {
       throw error;
@@ -22,7 +22,7 @@ const fetchCartData = createAsyncThunk('cart/fetchCartData', async () => {
 
 const removeFromCartOnBackend = createAsyncThunk('cart/removeFromCartOnBackend', async (cartItem) => {
     try {
-      await axios.delete(`${process.env.URL}/user/${id}/cart/${cartItem._id}`);
+      await axios.delete(`https://watchnest.onrender.com/api/user/${id}/cart/${cartItem._id}`);
       return cartItem;
     } catch (error) {
       throw error;
@@ -31,7 +31,7 @@ const removeFromCartOnBackend = createAsyncThunk('cart/removeFromCartOnBackend',
   
   const decreaseQuantityOnBackend = createAsyncThunk('cart/decreaseQuantityOnBackend', async (cartItem) => {
     try {
-      await axios.patch(`${process.env.URL}/user/${id}/cart/${cartItem._id}`, { quantity: cartItem.cartQuantity - 1 });
+      await axios.patch(`https://watchnest.onrender.com/api/user/${id}/cart/${cartItem._id}`, { quantity: cartItem.cartQuantity - 1 });
       return cartItem;
     } catch (error) {
       throw error;
@@ -40,7 +40,7 @@ const removeFromCartOnBackend = createAsyncThunk('cart/removeFromCartOnBackend',
   
   const addToCartOnBackend = createAsyncThunk('cart/addToCartOnBackend', async (cartItem) => {
     try {
-      await axios.post(`${process.env.URL}/user/${id}/cart`, cartItem);
+      await axios.post(`https://watchnest.onrender.com/api/user/${id}/cart`, cartItem);
       return cartItem;
     } catch (error) {
       throw error;
@@ -49,7 +49,7 @@ const removeFromCartOnBackend = createAsyncThunk('cart/removeFromCartOnBackend',
   
   const clearCartOnBackend = createAsyncThunk('cart/clearCartOnBackend', async () => {
     try {
-      await axios.delete(`${process.env.URL}/user/${id}/cart`);
+      await axios.delete(`https://watchnest.onrender.com/api/user/${id}/cart`);
       return id;
     } catch (error) {
       throw error;
@@ -59,7 +59,7 @@ const removeFromCartOnBackend = createAsyncThunk('cart/removeFromCartOnBackend',
    const fetchCartTotal = createAsyncThunk('cart/fetchCartTotal', async () => {
     try {
       if(id){
-        const response = await axios.get(`${process.env.URL}/user/${id}/cartTotal`);
+        const response = await axios.get(`https://watchnest.onrender.com/api/user/${id}/cartTotal`);
         return response.data;
       }
     } catch (error) {

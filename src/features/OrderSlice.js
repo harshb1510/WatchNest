@@ -11,7 +11,7 @@ const initialState = {
 export const ordersFetch = createAsyncThunk(
   "orders/ordersFetch",
   async (id) => {
-    const response = await axios.get(`${process.env.URL}/user/${id}/placedOrders`);
+    const response = await axios.get(`https://watchnest.onrender.com/api/user/${id}/placedOrders`);
     return response?.data;
   }
 );

@@ -15,7 +15,7 @@ const Profile = () => {
     useEffect(() => {
       const fetchUser = () => {
           if (id) {
-              fetch(`${process.env.URL}/user/${id}`)
+              fetch(`https://watchnest.onrender.com/api/user/${id}`)
                   .then(res => res.json()) // Parse the response as JSON
                   .then(data => {
                       setName(data.firstName);

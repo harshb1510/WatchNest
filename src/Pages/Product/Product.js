@@ -44,7 +44,7 @@ const Product = () => {
   const handleCouponSubmit = async (e)=>{
     e.preventDefault();
     if(coupon){
-    const sendCoupon = await axios.post(`${process.env.URL}/user/${_id}/coupon`,{coupon});
+    const sendCoupon = await axios.post(`https://watchnest.onrender.com/api/user/${_id}/coupon`,{coupon});
     const discount = sendCoupon.data.discount;
     setDiscount(discount);
     }else{

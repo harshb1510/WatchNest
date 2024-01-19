@@ -24,7 +24,7 @@ export default function Signup() {
     
     try {
     
-      const res = await axios.post( `${process.env.URL}/api/register`,data);
+      const res = await axios.post( `https://watchnest.onrender.com/api/register`,data);
       navigate("/login");
     } catch (err) {
       if (err.response && err.response.status >= 400 && err.response.status <= 500) {
