@@ -17,12 +17,14 @@ const Card = ({ item }) => {
   };
 }
   return (
-    <Link className="link" to={`/product/${item._id}`}>
+    
       <div className="card card1">
         <div className="image1">
+        <Link className="link" to={`/product/${item._id}`}>
           {item.isNew &&<span className="season">New Season</span>}
           <img src={item.img} alt="" className="mainImg" />
           <img src={item.img2} alt="" className="secondImg"/>
+    </Link>
         </div>
         <h2 style={{fontSize:"1rem"}}>{item.title}</h2>
         <div className="prices">
@@ -31,7 +33,6 @@ const Card = ({ item }) => {
         </div>
         <Button variant="dark" onClick={() => handleAddToCart(item)}>Add to cart</Button>
       </div>
-    </Link>
   );
 };
 

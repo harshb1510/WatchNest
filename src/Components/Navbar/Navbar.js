@@ -28,7 +28,7 @@ const Navbar = () => {
       <section className="navbarSection" >
         <nav className="navbar navbar-expand-lg bg-dark text-light ">
           <div className="container-fluid">
-            <Link to='/' className="navbar-brand text-light brandName" href="/">
+            <Link to='/' className="navbar-brand text-light brandName">
               <h1 className="brand">
               WatchNest
               </h1>

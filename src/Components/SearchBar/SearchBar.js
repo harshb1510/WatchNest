@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 import "./SearchBar.css";
 import SearchIcon from '@mui/icons-material/Search';
 import CloseIcon from '@mui/icons-material/Close';
@@ -7,7 +8,9 @@ import { useGetAllProductsQuery } from "../../features/productsApi";
 function SearchBar({ placeholder }) {
   const [filteredData, setFilteredData] = useState([]);
   const [wordEntered, setWordEntered] = useState("");
+  const [showResults, setShowResults] = useState(true); // State to manage visibility of search results
   const { data, error, isLoading } = useGetAllProductsQuery();
+
   const handleFilter = (event) => {
     const searchWord = event.target.value;
     setWordEntered(searchWord);
@@ -27,6 +30,12 @@ function SearchBar({ placeholder }) {
     setWordEntered("");
   };
 
+  const handleResultClick = () => {
+    // Hide search results, clear input, and navigate to the selected product page
+    setShowResults(false);
+    clearInput();
+  };
+
   return (
     <div className="search">
       <div className="searchInputs">
@@ -44,13 +53,13 @@ function SearchBar({ placeholder }) {
           )}
         </div>
       </div>
-      {filteredData.length != 0 && (
+      {showResults && filteredData.length !== 0 && (
         <div className="dataResult">
-          {filteredData.slice(0, 15).map((value, key) => {
-            return (
-                <p key={value.id}>{value.title} </p>
-            );
-          })}
+          {filteredData.slice(0, 15).map((value) => (
+            <Link key={value.id} to={`/product/${value._id}`} onClick={handleResultClick}>
+              <p>{value.title}</p>
+            </Link>
+          ))}
         </div>
       )}
     </div>

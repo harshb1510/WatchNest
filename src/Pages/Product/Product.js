@@ -9,6 +9,7 @@ import { useGetAllProductsQuery } from "../../features/productsApi";
 import { addToCartOnBackend } from '../../features/cartSlice';
 import axios from "axios";
 import { jwtDecode } from "jwt-decode";
+import { toast } from "react-toastify";
 
 const Product = () => {
   const dispatch = useDispatch();
@@ -38,7 +39,13 @@ const Product = () => {
 
   const handleAddToCart = () => {
     // Send the product and quantity to addToCartOnBackend thunk
-    dispatch(addToCartOnBackend({ product}));
+    if (!user) {
+      toast.error('Login first',{
+        position:"top-center"
+    })
+    }else{
+      dispatch(addToCartOnBackend({ product}));
+    }
   };
 
   const handleCouponSubmit = async (e)=>{

@@ -15,7 +15,7 @@ const Cart = () => {
   const cart = useSelector((state) => state.cart);
 
   useEffect(() => {
-    // dispatch(fetchCartData());
+    dispatch(fetchCartData());
     dispatch(fetchCartTotal());
   }, [dispatch]);
 

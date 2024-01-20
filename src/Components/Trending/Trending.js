@@ -43,7 +43,7 @@ export default function Trending() {
   return (
     <section className='trending'>
       <h3 className='trendingHeading'>TRENDING PRODUCTS</h3>
-     <div className="d-flex ">
+     <div className="d-flex">
         {trendingProducts?.map((product, index) => (
           <Card key={index} className='flex card'>
             <Link to={`/product/${product._id}`}>
@@ -51,7 +51,6 @@ export default function Trending() {
         </Link> 
             <Card.Body className='cardproduct'>
               <Card.Title style={{ fontWeight: "600" }}>{product?.title}</Card.Title>
-              <p style={{textDecoration:"line-through"}}>${product.oldPrice}</p>
               <Card.Text>
                 ${product?.price}
               </Card.Text>

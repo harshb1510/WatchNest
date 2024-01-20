@@ -10,7 +10,7 @@ import Signup from "./Pages/Signup/Signup";
 import Product from "./Pages/Product/Product"
 import {ToastContainer} from "react-toastify"
 import Cart from "./Components/Cart/Cart";
-import Checkout from "./Pages/Checkout";
+import Checkout from "./Pages/Checkout/Checkout";
 import History from "./Pages/History/History";
 
 function App() {
@@ -35,6 +35,18 @@ function App() {
         { path: "/men", element: <MenProduct /> },
         {
           path: "/women",
+          element: <MenProduct />,
+        },
+        {
+          path: "/premium",
+          element: <MenProduct />,
+        },
+        {
+          path: "/new-arrivals",
+          element: <MenProduct />,
+        },
+        {
+          path: "/smart-watches",
           element: <MenProduct />,
         },
         {
