@@ -61,7 +61,10 @@ function App() {
         {
           path: "/cart",
           element: <Cart />,
-        },
+        },{
+          path: "/checkout",
+          element: <Checkout />,
+        }
       ],
      
     },
@@ -72,10 +75,6 @@ function App() {
         {
           path: "/signup",
           element: <Signup />
-        },
-        {
-          path: "/checkout",
-          element: <Checkout/>
         }
   ]);
   return (
