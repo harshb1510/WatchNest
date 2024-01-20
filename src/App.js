@@ -53,6 +53,11 @@ function App() {
           path: "/product/:id",
           element: <Product />
         }
+        ,
+        {
+          path: "/shoppingHistory",
+          element: <History/>
+        }
       ],
      
     },
@@ -71,10 +76,6 @@ function App() {
         {
           path: "/checkout",
           element: <Checkout/>
-        },
-        {
-          path: "/shoppingHistory",
-          element: <History/>
         }
   ]);
   return (
