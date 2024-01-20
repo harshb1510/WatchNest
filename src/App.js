@@ -57,17 +57,17 @@ function App() {
         {
           path: "/shoppingHistory",
           element: <History/>
-        }
+        },
+        {
+          path: "/cart",
+          element: <Cart />,
+        },
       ],
      
     },
        {
           path: "/login",
           element: <Login />,
-        },
-        {
-          path: "/cart",
-          element: <Cart />,
         },
         {
           path: "/signup",
